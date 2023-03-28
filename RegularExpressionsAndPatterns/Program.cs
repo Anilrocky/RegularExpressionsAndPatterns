@@ -9,7 +9,7 @@ namespace RegularExpressionsAndPatterns
             UserRegistration reg = new UserRegistration();
             while (flag)
             {
-                Console.WriteLine("\nChoose option to perform \n1.Validate first name \n2.Validate last name \n3.Validtae Mail Id \n4.Validate mobile number \n5.Exit");
+                Console.WriteLine("\nChoose option to perform \n1.Validate first name \n2.Validate last name \n3.Validtae Mail Id \n4.Validate mobile number \n5.Validate password \n6.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -34,6 +34,11 @@ namespace RegularExpressionsAndPatterns
                         reg.ValidateMobileNumber(number);
                         break;
                     case 5:
+                        Console.WriteLine("Enter password");
+                        string passwd = Console.ReadLine();
+                        reg.ValidatePassword(passwd);
+                        break;
+                    case 6:
                         flag = false;
                         break;
                 }
