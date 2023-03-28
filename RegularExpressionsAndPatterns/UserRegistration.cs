@@ -10,6 +10,7 @@ namespace RegularExpressionsAndPatterns
     public class UserRegistration
     {
         public const string NAME = "^[A-Z]{1}[a-z]{2,}$";
+        public const string MAIL_ID = "^[0-9a-zA-Z]+[.+-_]{0,1}[0-9a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$";
         public void ValidateFirstName(string name)
         {
             if (Regex.IsMatch(name, NAME))
@@ -30,6 +31,17 @@ namespace RegularExpressionsAndPatterns
             else
             {
                 Console.WriteLine("Invalid last name");
+            }
+        }
+        public void ValidateEmail(string mail)
+        {
+            if (Regex.IsMatch(mail, MAIL_ID))
+            {
+                Console.WriteLine("Valid mail id");
+            }
+            else
+            {
+                Console.WriteLine("Invalid mail id");
             }
         }
     }
