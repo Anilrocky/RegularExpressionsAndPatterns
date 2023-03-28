@@ -11,6 +11,7 @@ namespace RegularExpressionsAndPatterns
     {
         public const string NAME = "^[A-Z]{1}[a-z]{2,}$";
         public const string MAIL_ID = "^[0-9a-zA-Z]+[.+-_]{0,1}[0-9a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$";
+        public const string MOBILE_NUMBER = "^[6-9]{1}[0-9]{9}$";
         public void ValidateFirstName(string name)
         {
             if (Regex.IsMatch(name, NAME))
@@ -42,6 +43,17 @@ namespace RegularExpressionsAndPatterns
             else
             {
                 Console.WriteLine("Invalid mail id");
+            }
+        }
+        public void ValidateMobileNumber(string number)
+        {
+            if (Regex.IsMatch(number, MOBILE_NUMBER))
+            {
+                Console.WriteLine("Valid mobile number");
+            }
+            else
+            {
+                Console.WriteLine("Invalid mobile number");
             }
         }
     }
