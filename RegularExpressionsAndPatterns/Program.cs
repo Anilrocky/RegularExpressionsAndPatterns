@@ -23,10 +23,8 @@ namespace RegularExpressionsAndPatterns
                         string lastName = Console.ReadLine();
                         reg.ValidateLastName(lastName);
                         break;
-                    case 3:
-                        Console.WriteLine("Enter mail id");
-                        string email = Console.ReadLine();
-                        reg.ValidateEmail(email);
+                    case 3:                        
+                        reg.ValidateEmail();
                         break;
                     case 4:
                         Console.WriteLine("Enter mobile number");
