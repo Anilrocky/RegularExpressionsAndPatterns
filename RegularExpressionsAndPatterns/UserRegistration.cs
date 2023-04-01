@@ -11,7 +11,7 @@ namespace RegularExpressionsAndPatterns
     {
         public const string NAME = "^[A-Z]{1}[a-z]{2,}$";
         public const string MAIL_ID = "^[a-zA-Z]{3,}[.]{0,1}[a-zA-Z]{0,}[@]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,3}[.]{0,1}[a-zA-Z]{0,2}$";
-        public const string MOBILE_NUMBER = "^[6-9]{1}[0-9]{9}$";
+        public const string MOBILE_NUMBER = "^[0-9]{2}\\s+[6-9]{1}[0-9]{9}";
         public const string PASSWORD = "^[A-Z]{1,}[a-z]{5,}[!@#$%~]{1}[0-9]{0,}$";
         public static string[] mails = { "abc@yahoo.com", "abc-100@yahoo.com", "abc111@abc.com", "abc-100@abc.net", "abc.100@abc.com.au", "abc@1.com", "abc@gmail.com.com", "abc +100@gmail.com" };
         public void ValidateFirstName(string name)
